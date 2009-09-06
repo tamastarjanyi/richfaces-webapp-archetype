@@ -1,0 +1,37 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Sometimes when you add a facelet xhtml to the project in Netbeans it destroys faces-config.xml
+    (Netbeans 6.7.1 does it). So here is a backup just in case.
+-->
+<faces-config version="1.2"  xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    <application>
+        <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>de</supported-locale>
+            <supported-locale>hu</supported-locale>
+        </locale-config>
+    </application>
+    <managed-bean>
+        <managed-bean-name>SimpleManagedRequestBean</managed-bean-name>
+        <managed-bean-class>managedBeans.SimpleManagedRequestBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>SimpleManagedSessionBean</managed-bean-name>
+        <managed-bean-class>managedBeans.SimpleManagedSessionBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>SimpleManagedApplicationBean</managed-bean-name>
+        <managed-bean-class>managedBeans.SimpleManagedApplicationBean</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+</faces-config>
+
+
